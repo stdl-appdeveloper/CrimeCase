@@ -10,22 +10,23 @@
     body {
       margin: 0;
       font-family: 'Roboto', sans-serif;
-      background-color: #1a1a27; /* Background */
+      background-color: #1a1a27; 
       display: flex;
       justify-content: center;
       align-items: center;
       height: 100vh;
-      color: rgba(178, 176, 191, 1); /* Text primary */
+      color: rgba(178, 176, 191, 1); 
     }
 
     .container {
       text-align: center;
-      background: #1e1e2d; /* Surface */
-      padding: 50px 40px;
+      background: #1e1e2d; 
+      padding: 40px 20px;
       border-radius: 12px;
       box-shadow: 0 8px 24px rgba(0,0,0,0.5);
       max-width: 400px;
       width: 90%;
+      margin: 0 20px;
       transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
 
@@ -33,14 +34,14 @@
       font-size: 2em;
       margin-bottom: 20px;
       font-weight: 500;
-      color: #7e6fff; /* MudBlazor Primary */
+      color: #7e6fff; 
     }
 
     p {
       font-size: 1em;
       margin-bottom: 30px;
       line-height: 1.5;
-      color: rgba(146,146,159,1); /* Text secondary */
+      color: rgba(146,146,159,1); 
     }
 
     .button {
@@ -48,8 +49,8 @@
       padding: 14px 36px;
       font-size: 16px;
       font-weight: 500;
-      color: rgba(255,255,255,1); /* Button text */
-      background-color: #7e6fff; /* MudBlazor Primary */
+      color: rgba(255,255,255,1); 
+      background-color: #7e6fff; 
       border: none;
       border-radius: 8px;
       cursor: pointer;
@@ -59,14 +60,14 @@
     }
 
     .button:hover {
-      background-color: rgb(90,71,255); /* Primary darken */
+      background-color: rgb(90,71,255); 
       transform: translateY(-2px);
     }
 
     .download-msg {
       margin-top: 20px;
       font-size: 0.95em;
-      color: #7e6fff; /* MudBlazor Primary */
+      color: #7e6fff; 
       opacity: 0;
       animation: fadeInMsg 1s forwards 1s;
     }
@@ -79,7 +80,6 @@
 
   <script>
     window.onload = function() {
-      // Automatischer Download
       const link = document.createElement('a');
       link.href = 'apk/CrimeCase.apk';
       link.download = 'CrimeCase.apk';
@@ -87,7 +87,6 @@
       link.click();
       document.body.removeChild(link);
 
-      // Nachricht einblenden
       const msg = document.querySelector('.download-msg');
       if(msg) msg.style.opacity = 1;
     };
@@ -96,7 +95,7 @@
 <body>
   <div class="container">
     <h1>CrimeCase APK</h1>
-    <p>Der Download startet automatisch. Wenn nichts passiert, tippe auf den Button.</p>
+    <p>Download startet automatisch. Wenn nichts passiert, tippe auf den Button.</p>
     <a class="button" href="apk/CrimeCase.apk" download>Download starten</a>
     <div class="download-msg">Download wird gestartet…</div>
   </div>
