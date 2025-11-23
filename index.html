@@ -2,13 +2,21 @@
 <html lang="de">
 <head>
   <meta charset="UTF-8">
-  <title>App Download</title>
+  <title>CrimeCase Download</title>
+  <script>
+    // Automatischer Download beim Laden der Seite
+    window.onload = function() {
+      const link = document.createElement('a');
+      link.href = 'apk/CrimeCase.apk'; // Pfad zur APK
+      link.download = 'CrimeCase.apk';
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    };
+  </script>
 </head>
 <body>
-  <h1>CrimeCase APK herunterladen</h1>
-  <p>Tippe auf den Button, um die App herunterzuladen:</p>
-  <a href="apk/CrimeCase.apk" download>
-    <button style="font-size: 20px; padding: 10px 20px;">App herunterladen</button>
-  </a>
+  <h1>Download wird gestartet...</h1>
+  <p>Wenn nichts passiert, tippe <a href="apk/CrimeCase.apk" download>hier</a> auf den Link.</p>
 </body>
 </html>
